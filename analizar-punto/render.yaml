@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mi-widget-arcgis
+    env: static
+    buildCommand: "" # No es necesario si ya subiste la carpeta dist
+    publishPath: ./
+    headers:
+      - path: /*
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /*
+        name: Access-Control-Allow-Methods
+        value: "GET, OPTIONS"
+      - path: /*
+        name: Access-Control-Allow-Headers
+        value: "Content-Type, Authorization"
